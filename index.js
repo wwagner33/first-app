@@ -13,12 +13,15 @@
 const express = require("express");
 const app = express();
 const routes = require("./routes");
+const expressLayouts = require("express-ejs-layouts");
 
 const port=3030;
 const address = "localhost";
 
 
-
+//tiva uso do EJS e do Express-ejs-layouts
+app.set('view engine','ejs');
+app.use(expressLayouts);
 
 //Criando usando rotas simples que estão no arquivo routes.js
 app.use('/',routes);
