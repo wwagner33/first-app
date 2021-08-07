@@ -6,7 +6,7 @@ const app = express();
 
 // let db = require("./db");
 
-//db.criarDB("minhaBaseDados");
+// db.criarDB("minhaBaseDados");
 
 //Especifica a pasta contendo arquivos estáticos. 
 //O nome 'public' não precisará ser colocado na rota 
