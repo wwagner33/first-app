@@ -19,7 +19,7 @@ const port=3030;
 const address = "localhost";
 
 
-//tiva uso do EJS e do Express-ejs-layouts
+//ativa uso do EJS e do Express-ejs-layouts
 app.set('view engine','ejs');
 app.use(expressLayouts);
 
