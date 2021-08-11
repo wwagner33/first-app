@@ -112,7 +112,7 @@ function update(index,link){
 
 function remove(index,link){
 
-    //para ser feito
+    // para ser feito
 
 }
    

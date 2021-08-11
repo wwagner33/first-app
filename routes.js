@@ -48,12 +48,11 @@ router.get('/cadastro',(req,res)=>{ //callback - funcao que trata dado evento  G
 });
 
 router.post('/cadastro/remove',(req,res)=>{
-    console.log("aqui");
     let item =req.body.id; //pega o valor passado através do parâmetro id e atribui a variável item. 
-    console.log(req.body)
+
     users.splice(item,1); //este método permite adicionar ou remover um item do vetor em uma dada posição. 
     //res.render('pages/cadastro',{users:users});
-    console.log(users);
+    console.log("Elementos cadastrados: ",users);
     res.sendStatus(200); //envia mensagem 200 significando que as modificacoes foram ok
 });
 
