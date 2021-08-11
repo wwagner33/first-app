@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const app = express();
 
 // const faker = require("faker");
 
@@ -16,7 +15,8 @@ router.use(express.static('public'));
 
 
 
-//Exemplode Rotas: 
+//************* Exemplode Rotas ************* 
+
 /*
 
 http://localhost:3030/css
@@ -28,13 +28,19 @@ http://localhost:3030/index.html
 /curriculo =  http://localhost:3030/cadastro
 
 */
-router.get('/',(req,res)=>{
+router.get('/',(req,res)=>{ //callback - funcao que trata dado evento GET
     res.render('pages/home');
 });
 
-router.get('/about',(req,res)=>{
+router.get('/about',(req,res)=>{ //callback - funcao que trata dado evento  GET
 
     res.render('pages/about');
+});
+
+router.get('/cadastro',(req,res)=>{ //callback - funcao que trata dado evento  GET
+    let users = [
+        {name:"Wellington W. F. Sarmento",address:"Rua Dom Jeronimo, 666",email:"wwagner@virtual.ufc.br",age:46,height:1.70,vote:true},{name:"PAtricia S. Paula",address:"Rua Dom Jeronimo, 666",email:"patricia@virtual.ufc.br",age:46,height:1.70,vote:true},{name:"Henrique Sérgio L. Pequeno",address:"Rua do Henrique, 666",email:"henrique@virtual.ufc.br",age:46,height:1.70,vote:true}];
+    res.render('pages/cadastro',{users}); //a funcao render pode receber um paametro na forma de objeto literal
 });
 
 router.post('/cadastro/remove',(req,res)=>{
@@ -48,10 +54,7 @@ router.post('/cadastro/remove',(req,res)=>{
     //res.render('pages/insert',{result});
 });
 
-router.get('/cadastro',(req,res)=>{
-  
-    res.render('pages/cadastro');
-});
+
 
 router.get('/cadastro/insert',(req,res)=>{
     let usuario={name: "wellington", email: "wwagner@virtual.ufc.br"};
