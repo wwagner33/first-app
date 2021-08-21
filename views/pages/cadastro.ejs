@@ -43,8 +43,8 @@
                         
                     </td>
                     <td data-index-row="<%=index%>">
-                        <span  class="show"><%= users[index].height %></span>
-                        <input type="text" name="height"  class="hidden" value="<%= users[index].height %>">
+                        <span  class="show"><%= users[index].heigth %></span>
+                        <input type="text" name="heigth"  class="hidden" value="<%= users[index].heigth %>">
                         
                     </td>
                     <td data-index-row="<%=index%>">
@@ -76,4 +76,14 @@
 
         </tbody>
     </table>
+
+    <form action="/cadastro/add" method="post">
+        <input type="text" name="_name" id="_name">
+        <input type="text" name="_email" id="_email">
+        <input type="text" name="_address" id="_address">
+        <input type="text" name="_heigth" id="_heigth">
+        <input type="text" name="_age" id="_age">
+        <input type="text" name="_vote" id="_vote">
+        <input type="submit" value="Enviar">
+    </form>
 </div>
