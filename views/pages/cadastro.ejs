@@ -1,10 +1,10 @@
 <%- contentFor( 'body') %>
 
-<div class="jumbotron">
+<div class="table-responsive-xl ">
     <h2>Usuários Cadastrados</h2>
     <p>Lista de usuários Cadastrados no sistema.</p>            
-    <table class="table table-hover" id="list">
-        <thead>
+    <table class="table table-hover bg-light" id="list">
+        <thead class="thead-dark">
         <tr>
             <th>Nome</th>
             <th>Endereço</th>
@@ -12,7 +12,8 @@
             <th>Idade</th>
             <th>Altura</th>
             <th>Vota?</th>
-            <th>Ação</th>
+            <th>Editar</th>
+            <th>Remover</th>
         </tr>
         </thead>
         <tbody>
@@ -77,13 +78,44 @@
         </tbody>
     </table>
 
+    <h2>Cadastrar novo usuário</h2>
+
     <form action="/cadastro/add" method="post">
-        <input type="text" name="_name" id="_name">
-        <input type="text" name="_email" id="_email">
-        <input type="text" name="_address" id="_address">
-        <input type="text" name="_heigth" id="_heigth">
-        <input type="text" name="_age" id="_age">
-        <input type="text" name="_vote" id="_vote">
-        <input type="submit" value="Enviar">
+        <div class="form-group">
+            <label for="_name">Nome:</label>
+            <input type="text" name="_name" id="_name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="_email">E-mail:</label>
+            <input type="text" name="_email" id="_email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="_address">Endereço:</label>
+            <input type="text" name="_address" id="_address" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="_heigth">Altura:</label>
+            <input type="text" name="_heigth" id="_heigth" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="_age">Idade:</label>
+            <input type="text" name="_age" id="_age" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="_vote">Votou:</label>
+            <input type="text" name="_vote" id="_vote" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Enviar"  class="btn btn-success">
+        </div>
+
     </form>
+
+    
 </div>

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// const faker = require("faker");
+
 
 // let db = require("./db");
 
@@ -12,8 +12,6 @@ const router = express.Router();
 //Para serem alcançados os arquivos e pastas que estão dentro dele. 
 //Por isso na imagem que está na página home.ejs só há o indicativo para 'images'
 router.use(express.static('public'));
-
-
 
 //************* Exemplode Rotas ************* 
 
@@ -88,11 +86,9 @@ router.post('/cadastro/remove',(req,res)=>{
 });
 
 
-
 router.post('/cadastro/update',(req,res)=>{
     //substitui os valores armazenados no item do vetror dado por id, por valores fornecidos como parametro vindos do navegador.
     //recebe dados do cliente na forma de um objeto JSON
-    
 
     users[req.body.id].name=req.body.name; //ID do objeto ou Tag: name
     users[req.body.id].email=req.body.email;
@@ -101,9 +97,9 @@ router.post('/cadastro/update',(req,res)=>{
     users[req.body.id].heigth=req.body.heigth;
     users[req.body.id].vote=req.body.vote;
 
-    console.log("Dados recebidos: ",req.body);//mostra no console do servidor os dados recebidos
-   
+
     res.sendStatus(200); //envia mensagem 200 significando que as modificacoes foram ok
+    console.log("Dados recebidos: ",req.body);//mostra no console do servidor os dados recebidos
 });
 
 router.get('/cadastro/list',(req,res)=>{
